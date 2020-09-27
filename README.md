@@ -9,6 +9,9 @@ $ yarn install
 # serve with hot reload at localhost:3000
 $ yarn dev
 
+# serve api
+$ json-server --watch ~/work/users.json --port 4001
+
 # build for production and launch server
 $ yarn build
 $ yarn start
