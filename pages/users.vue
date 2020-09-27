@@ -10,11 +10,17 @@
 </template>
 
 <script>
+import UsersApi from '@/plugins/axios/modules/users'
+
 export default {
   async asyncData({ app }) {
-    const { data } = await app.$axios.get(`http://localhost:4001/users`)
-    return { users: data }
-  },
+    // const { data } = await app.$axios.get(`http://localhost:4001/users`)
+    // return { users: data }
+
+    return UsersApi.all().then((response) => {
+      return { users: response }
+    });
+  }
 }
 </script>
 
